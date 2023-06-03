@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class SC_PlatformTile : MonoBehaviour
 {
     public Transform startPoint;
     public Transform endPoint;
-    public GameObject[] obstacles; // Objects that contain different obstacle types which will be randomly activated
-    public GameObject coin; // Reference to the coin object
+    public GameObject[] obstacles; //Objects that contains different obstacle types which will be randomly activated
 
     public void ActivateRandomObstacle()
     {
@@ -16,9 +17,6 @@ public class SC_PlatformTile : MonoBehaviour
         System.Random random = new System.Random();
         int randomNumber = random.Next(0, obstacles.Length);
         obstacles[randomNumber].SetActive(true);
-
-        // Activate a random coin
-        ActivateRandomCoin();
     }
 
     public void DeactivateAllObstacles()
@@ -26,19 +24,6 @@ public class SC_PlatformTile : MonoBehaviour
         for (int i = 0; i < obstacles.Length; i++)
         {
             obstacles[i].SetActive(false);
-        }
-    }
-
-    public void ActivateRandomCoin()
-    {
-        coin.SetActive(true);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            coin.SetActive(false);
         }
     }
 }
