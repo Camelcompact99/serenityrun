@@ -22,9 +22,20 @@ public class SC_DialogoManager : MonoBehaviour
         //creamos un array de strings que contenga todos los textos que queremos que se sucedan 
         dialogos = new string[]
         {
-            "Diálogo 1",
-            "Diálogo 2",
-            "Diálogo 3"
+            "Aquí no se trata de perder, sino de abrazar la repetición.",
+            "¡Oh, mira, otra nube! ¡Definitivamente no hemos tenido suficiente!",
+            "...¿nos estamos divirtiendo? ¡Claro, si disfrutas de lo mismo una y otra vez!",
+            "Intenta hacer un Speedrun... ¡a ver dale!",
+            "Sigue adelante, porque claramente no hay otra opción.",
+            "¡La emoción no tiene límites... porque no hay emoción en absoluto!",
+            "Eres un verdadero experto en hacer lo mismo",
+            "Sigues en esta maravillosa monotonía relajante",
+            "Tu determinación es asombrosa... en seguir adelante sin sentido",
+            "No hay nadie que pueda detenerte... porque nadie más está jugando",
+            "Como contar ovejas en un sueño que nunca termina.",
+            "Has ganado otro punto más en tu búsqueda infinita",
+            "El único límite en este juego es tu propia paciencia",
+            "Una vida sin preocupaciones... y ninguna emoción real",
         };
 
         indiceActual = 0;
