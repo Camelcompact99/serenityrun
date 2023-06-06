@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class SC_IRPlayer : MonoBehaviour
 {
+    public SC_DialogoManager dialogoManager;
+
     public float gravity = 20.0f;
     public float jumpHeight = 2.5f;
 
@@ -70,15 +72,8 @@ public class SC_IRPlayer : MonoBehaviour
         if(collision.gameObject.tag == "Finish")
         {
             //print("GameOver!");
-            SC_GroundGenerator.instance.gameOver = true;
+            dialogoManager.MostrarSiguienteDialogo();
         }
-        
-        void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Coin"))
-        {
-            Destroy(other.gameObject);
-        }
-       }  
+    
     }
 }

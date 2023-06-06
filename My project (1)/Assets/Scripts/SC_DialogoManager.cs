@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogoManager : MonoBehaviour
+public class SC_DialogoManager : MonoBehaviour
 {
     public TMP_Text textoDialogo;
 
