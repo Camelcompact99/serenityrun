@@ -1,8 +1,13 @@
+//SCRIPT PARA CONTROLAR LOS DIALOGOS :P 
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 using TMPro;
+
+
 
 public class SC_DialogoManager : MonoBehaviour
 {
@@ -14,6 +19,7 @@ public class SC_DialogoManager : MonoBehaviour
 
     private void Start()
     {
+        //creamos un array de strings que contenga todos los textos que queremos que se sucedan 
         dialogos = new string[]
         {
             "Diálogo 1",
@@ -25,7 +31,7 @@ public class SC_DialogoManager : MonoBehaviour
 
         textoDialogo.text = dialogos[indiceActual];
     }
-
+//esta función nos muestra el siguiente dialogo del array 
     public void MostrarSiguienteDialogo()
     {
         indiceActual++;
@@ -36,7 +42,7 @@ public class SC_DialogoManager : MonoBehaviour
         }
         else
         {
-            textoDialogo.text = "Fin del diálogo";
+            textoDialogo.text = dialogos[1];
         }
     }
 }

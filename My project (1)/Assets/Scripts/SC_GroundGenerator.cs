@@ -1,3 +1,7 @@
+//GENERADOR DE TERRENO 
+
+
+//imports necesarios 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +9,11 @@ using UnityEngine.SceneManagement;
 
 public class SC_GroundGenerator : MonoBehaviour
 {
+    //hacemos un import de nuestra camara nuestro punto de inicio y nuestro prefab que queremos que se genere
     public Camera mainCamera;
-    public Transform startPoint; //Point from where ground tiles will start
+    public Transform startPoint; 
     public SC_PlatformTile tilePrefab;
+    //velocidad /prespawn de casillas /casillas sin obstaculos
     public float movingSpeed = 12;
     public int tilesToPreSpawn = 15; //How many tiles should be pre-spawned
     public int tilesWithoutObstacles = 3; //How many tiles at the beginning should not have obstacles, good for warm-up
@@ -56,7 +62,7 @@ public class SC_GroundGenerator : MonoBehaviour
         if (!gameOver && gameStarted)
         {
             transform.Translate(-spawnedTiles[0].transform.forward * Time.deltaTime * (movingSpeed + (score/500)), Space.World);
-            score += Time.deltaTime * movingSpeed;
+            //score += Time.deltaTime * movingSpeed;
         }
 
         if (mainCamera.WorldToViewportPoint(spawnedTiles[0].endPoint.position).z < 0)
@@ -105,7 +111,7 @@ public class SC_GroundGenerator : MonoBehaviour
         }
 
 
-        GUI.color = Color.green;
-        GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
+        //GUI.color = Color.green;
+        //GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
     }
 }
