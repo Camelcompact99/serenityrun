@@ -72,5 +72,13 @@ public class SC_IRPlayer : MonoBehaviour
             //print("GameOver!");
             SC_GroundGenerator.instance.gameOver = true;
         }
+        
+        void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+        }
+       }  
     }
 }
