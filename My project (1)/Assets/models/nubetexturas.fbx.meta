@@ -15,7 +15,7 @@ ModelImporter:
       name: nube3_DefaultMaterial_Normal
     second: {fileID: 2800000, guid: e8b71de4e8a9f0548a8d5446e78c6793, type: 3}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
