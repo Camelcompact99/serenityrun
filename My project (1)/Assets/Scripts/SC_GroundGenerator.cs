@@ -57,8 +57,7 @@ public class SC_GroundGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Move the object upward in world space x unit/second.
-        //Increase speed the higher score we get
+        // Movimiento del objeto y control de velocidad
         if (!gameOver && gameStarted)
         {
             transform.Translate(-spawnedTiles[0].transform.forward * Time.deltaTime * (movingSpeed + (score/500)), Space.World);
@@ -94,24 +93,4 @@ public class SC_GroundGenerator : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        if (gameOver)
-        {
-            GUI.color = Color.red;
-            GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200), "Game Over\nYour score is: " + ((int)score) + "\nPress 'Space' to restart");
-        }
-        else
-        {
-            if (!gameStarted)
-            {
-                GUI.color = Color.red;
-                GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200), "Press 'Space' to start");
-            }
-        }
-
-
-        //GUI.color = Color.green;
-        //GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
-    }
 }
